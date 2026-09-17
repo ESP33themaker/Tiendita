@@ -1,6 +1,7 @@
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class ControlProductos {
     
@@ -13,7 +14,27 @@ public class ControlProductos {
     }
 
     void agregar() {
-        throw new UnsupportedOperationException("En construcción."); 
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.println("\n--- AGREGAR NUEVO PRODUCTO ---");
+        
+        System.out.print("Ingresa el código (número entero): ");
+        int codigo = teclado.nextInt();
+        
+        // Limpiamos el buffer del teclado
+        teclado.nextLine(); 
+        
+        System.out.print("Ingresa la descripción: ");
+        String descripcion = teclado.nextLine();
+        
+        System.out.print("Ingresa el precio: ");
+        float precio = teclado.nextFloat();
+        
+        // Creamos el objeto y lo agregamos a la lista del proyecto
+        Producto nuevo = new Producto(codigo, descripcion, precio);
+        listaProductos.add(nuevo);
+        
+        System.out.println("¡Producto agregado con éxito a la lista!\n");
     }
 
     void ver() {
