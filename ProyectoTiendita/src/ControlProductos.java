@@ -13,18 +13,8 @@ public class ControlProductos {
         listaProductos.add(new Producto(3,"Chicle",2.5f));
     }
 
-    // === RAMA: feature/gestion-producto ===
     void agregar() {
-        System.out.print("Código: ");
-        int codigo = teclado.nextInt();
-        teclado.nextLine();
-        System.out.print("Descripción: ");
-        String descripcion = teclado.nextLine();
-        System.out.print("Precio: ");
-        float precio = teclado.nextFloat();
-
-        listaProductos.add(new Producto(codigo, descripcion, precio));
-        System.out.println("✅ Producto agregado correctamente.");
+        throw new UnsupportedOperationException("En construcción."); 
     }
 
     void ver() {
@@ -41,5 +31,16 @@ public class ControlProductos {
     
     void modificar() {
         throw new UnsupportedOperationException("En construcción."); 
+    }
+
+
+    void gestionar() {
+        System.out.println("=== GESTIÓN DE PRODUCTOS ===");
+        System.out.println("Total de productos en la lista: " + listaProductos.size());
+        System.out.println("Productos registrados:");
+        for (Producto p : listaProductos) {
+            System.out.println(" - " + p.getCodigo() + " | " 
+                    + p.getDescripcion() + " | $" + p.getPrecio());
+        }
     }
 }
