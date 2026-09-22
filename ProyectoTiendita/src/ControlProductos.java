@@ -15,6 +15,7 @@ public class ControlProductos {
 
     // === RAMA: feature/gestion-producto ===
     void agregar() {
+<<<<<<< HEAD
         System.out.print("Código: ");
         int codigo = teclado.nextInt();
         teclado.nextLine();
@@ -25,6 +26,29 @@ public class ControlProductos {
 
         listaProductos.add(new Producto(codigo, descripcion, precio));
         System.out.println("✅ Producto agregado correctamente.");
+=======
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.println("\n--- AGREGAR NUEVO PRODUCTO ---");
+        
+        System.out.print("Ingresa el código (número entero): ");
+        int codigo = teclado.nextInt();
+        
+        // Limpiamos el buffer del teclado
+        teclado.nextLine(); 
+        
+        System.out.print("Ingresa la descripción: ");
+        String descripcion = teclado.nextLine();
+        
+        System.out.print("Ingresa el precio: ");
+        float precio = teclado.nextFloat();
+        
+        // Creamos el objeto y lo agregamos a la lista del proyecto
+        Producto nuevo = new Producto(codigo, descripcion, precio);
+        listaProductos.add(nuevo);
+        
+        System.out.println("¡Producto agregado con éxito a la lista!\n");
+>>>>>>> bd2c3e427ef62de3da2f9a4052e7cc645489afed
     }
 
     void ver() {
@@ -131,4 +155,9 @@ public class ControlProductos {
         }    
         System.out.println("¡Producto modificado exitosamente!\n"); 
     }
+<<<<<<< HEAD
+=======
+    
+    
+>>>>>>> bd2c3e427ef62de3da2f9a4052e7cc645489afed
 }
