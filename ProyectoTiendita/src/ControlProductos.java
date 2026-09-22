@@ -1,6 +1,7 @@
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class ControlProductos {
     
@@ -25,7 +26,17 @@ public class ControlProductos {
     }
 
     void borrar() {
-        throw new UnsupportedOperationException("En construcción."); 
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.print("Ingresa el codigo del producto que deseas borrar: ");
+        int codigo = teclado.nextInt();
+        
+        boolean eliminado = listaProductos.removeIf(producto -> producto.getCodigo() == codigo);
+        
+        if (eliminado) {
+            System.out.println("Producto eliminado correctamente.");
+        } else { 
+            System.out.println("No se encontro un producto con ese codigo."); }
     }
     
     void modificar() {
