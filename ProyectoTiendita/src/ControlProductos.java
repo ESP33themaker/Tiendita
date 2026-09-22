@@ -15,18 +15,6 @@ public class ControlProductos {
 
     // === RAMA: feature/gestion-producto ===
     void agregar() {
-<<<<<<< HEAD
-        System.out.print("Código: ");
-        int codigo = teclado.nextInt();
-        teclado.nextLine();
-        System.out.print("Descripción: ");
-        String descripcion = teclado.nextLine();
-        System.out.print("Precio: ");
-        float precio = teclado.nextFloat();
-
-        listaProductos.add(new Producto(codigo, descripcion, precio));
-        System.out.println("✅ Producto agregado correctamente.");
-=======
         Scanner teclado = new Scanner(System.in);
         
         System.out.println("\n--- AGREGAR NUEVO PRODUCTO ---");
@@ -48,7 +36,6 @@ public class ControlProductos {
         listaProductos.add(nuevo);
         
         System.out.println("¡Producto agregado con éxito a la lista!\n");
->>>>>>> bd2c3e427ef62de3da2f9a4052e7cc645489afed
     }
 
     void ver() {
