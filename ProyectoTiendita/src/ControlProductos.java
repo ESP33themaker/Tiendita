@@ -13,8 +13,8 @@ public class ControlProductos {
         listaProductos.add(new Producto(3,"Chicle",2.5f));
     }
 
-    // === RAMA: feature/gestion-producto ===
     void agregar() {
+<<<<<<< HEAD
         Scanner teclado = new Scanner(System.in);
         
         System.out.println("\n--- AGREGAR NUEVO PRODUCTO ---");
@@ -36,6 +36,9 @@ public class ControlProductos {
         listaProductos.add(nuevo);
         
         System.out.println("¡Producto agregado con éxito a la lista!\n");
+=======
+        throw new UnsupportedOperationException("En construcción."); 
+>>>>>>> cfac8517b3ad56e61014072e84252ff4a6be5221
     }
 
     void ver() {
@@ -143,8 +146,22 @@ public class ControlProductos {
         System.out.println("¡Producto modificado exitosamente!\n"); 
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
     
 >>>>>>> bd2c3e427ef62de3da2f9a4052e7cc645489afed
+=======
+
+
+    void gestionar() {
+        System.out.println("=== GESTIÓN DE PRODUCTOS ===");
+        System.out.println("Total de productos en la lista: " + listaProductos.size());
+        System.out.println("Productos registrados:");
+        for (Producto p : listaProductos) {
+            System.out.println(" - " + p.getCodigo() + " | " 
+                    + p.getDescripcion() + " | $" + p.getPrecio());
+        }
+    }
+>>>>>>> cfac8517b3ad56e61014072e84252ff4a6be5221
 }
