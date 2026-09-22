@@ -14,7 +14,6 @@ public class ControlProductos {
     }
 
     void agregar() {
-<<<<<<< HEAD
         Scanner teclado = new Scanner(System.in);
         
         System.out.println("\n--- AGREGAR NUEVO PRODUCTO ---");
@@ -36,9 +35,6 @@ public class ControlProductos {
         listaProductos.add(nuevo);
         
         System.out.println("¡Producto agregado con éxito a la lista!\n");
-=======
-        throw new UnsupportedOperationException("En construcción."); 
->>>>>>> cfac8517b3ad56e61014072e84252ff4a6be5221
     }
 
     void ver() {
@@ -145,13 +141,7 @@ public class ControlProductos {
         }    
         System.out.println("¡Producto modificado exitosamente!\n"); 
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
-    
->>>>>>> bd2c3e427ef62de3da2f9a4052e7cc645489afed
-=======
+
 
 
     void gestionar() {
@@ -163,5 +153,4 @@ public class ControlProductos {
                     + p.getDescripcion() + " | $" + p.getPrecio());
         }
     }
->>>>>>> cfac8517b3ad56e61014072e84252ff4a6be5221
 }
