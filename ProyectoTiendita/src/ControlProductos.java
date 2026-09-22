@@ -28,8 +28,25 @@ public class ControlProductos {
     }
 
     void ver() {
-        throw new UnsupportedOperationException("En construcción."); 
+        if (listaProductos.isEmpty()) {
+        System.out.println("La lista de productos está vacía.");
+        return;
     }
+
+    System.out.println("=== LISTA DE PRODUCTOS ===");
+    System.out.printf("%-8s %-20s %-10s%n", "CÓDIGO", "DESCRIPCIÓN", "PRECIO");
+    System.out.println("----------------------------------------");
+    
+    for (Producto p : listaProductos) {
+        System.out.printf("%-8d %-20s $%.2f%n", 
+            p.getCodigo(), 
+            p.getDescripcion(), 
+            p.getPrecio()
+        );
+    }
+    System.out.println("----------------------------------------");
+        }
+    
 
     void buscar() {
         Scanner teclado = new Scanner(System.in);
